@@ -35,7 +35,7 @@ function upgrade(type) {
 if (type == "dirt") {
 if (dirt >= 100){
 dirt = dirt-100
-var tool = 1
+tool = tool+1
 storage.setItem("tool",tool)
 update()
 }
