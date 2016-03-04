@@ -25,6 +25,11 @@ function minedirt() {
 dirt = dirt + 1
 update()
 storage.setItem("dirt",dirt)
+if (tool==1) {
+dirt = dirt + 1
+update()
+storage.setItem("dirt",dirt)
+}
 }
 function upgrade(type) {
 if (type == "dirt") {
