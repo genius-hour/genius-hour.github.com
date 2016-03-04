@@ -7,7 +7,7 @@
 $(document).ready(function(){
   $(".b-dirt").click(function(){
     if (dirt>100) {
-    $( ".b-dirt" ).prop( "disabled", true );
+    $( "" ).prop( "disabled", true );
     }
 });
 });
@@ -23,14 +23,29 @@ function update() {
 document.getElementById("DIRT").innerHTML = "You have "+dirt+" dirt";
 }
 function minedirt() {
-dirt = dirt + 1
+if (tool == "dirtshovel") {
+dirt = dirt + 2
 update()
 storage.setItem("dirt",dirt)
 check()
 }
+else {
+dirt = dirt + 1
+}
+}
+function upgrade(type) {
+if (type == 'dirt') {
+if (dirt >= 100){
+dirt=dirt-100
+var tool = "dirtshovel"
+update()
+}
+}
+}
 </script>
 <body>
 <input type="button" class="b-dirt" value="Mine some dirt" onclick="minedirt()" />
+<input type="button" class="u-dirt" value="upgrade to dirt shovel" onclick="upgrade('dirt')" />
 </body>
 <div id="game-saves">
 			<input type="button" value="Export" onclick="save('export')">
