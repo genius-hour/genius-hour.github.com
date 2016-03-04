@@ -27,10 +27,11 @@ if (tool == "dirtshovel") {
 dirt = dirt + 2
 update()
 storage.setItem("dirt",dirt)
-check()
 }
 else {
 dirt = dirt + 1
+update()
+storage.setItem("dirt",dirt)
 }
 }
 function upgrade(type) {
