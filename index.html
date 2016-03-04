@@ -5,7 +5,9 @@
 <script>
 $(document).ready(function(){
   $(".b-dirt").click(function(){
+    if (dirt>100) {
     $(".b-dirt").fadeOut()
+    }
 });
 });
 var storage = window.localStorage;
