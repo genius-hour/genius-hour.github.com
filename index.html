@@ -1,30 +1,354 @@
-<html>
-  <head>
-    <div id="HP"></div>
-    <script src="jquery.js"></script>
-    <script>
-$(document).ready(function(){
-    $("#button1").click(function(){
-        $(this).hide();
-        hp = hp + 10;
-    });
-});
-    </script>
-    <script>
-      var storage = window.localStorage;
-      if (!storage.getItem("health")) storage.setItem("health",100);
-      hp = parseInt(storage.getItem("health"));//必须格式转换
-      document.getElementById("HP").innerHTML = health+" "+"health remain";
-      showStorage();
-    </script>
-    <meta charset="UTF-8">
-    <title>GAME for genius hour</title>
-    <h2>THIS GAME WAS CREATED BY ERIC LIU, ONLY FOR GENIUS HOUR PROJECT</h2>
-  </head>
-  <body>
-    <button class="game-element-button" id="button1">test button --- Just for testing right now.</button>
-  </body>
-  <script>
-    
-  </script>
-</html>
+
+<body>
+<title>Infinity Refresh</title>
+<h1>Created by Eric Liu</h1>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://infinityinfinity.github.io/stylesheets/button.css" type="text/css"/>
+<script src="jquery.js"></script>
+<script>$(document).keyup(function(e) {
+if(e.keyCode==77 && !$("#textbased-input").is(':focus')) {
+cheat();
+}
+});</script>
+<h2>【Special Resource】</h2>
+<h1 id="XY">1</h1>
+<h2>【Coin】</h2>
+<h1 id="count">1 Coin</h1>
+<h1 id="heitie">1</h1>
+<h1 id="QT">1</h1>
+<h1 id="BY">1</h1>
+<h1 id="HJ">1</h1>
+<h2>【Robot】</h2>
+<h1 id="zidong"></h1>
+<h1 id="zdby"></h1>
+<script>
+window.onload = checkLeave();
+if (typeof(element.onselectstart) != "undefined") {        
+    element.onselectstart = new Function("return false");        
+} else {
+    element.onmousedown = new Function("return false");        
+    element.onmouseup = new Function("return true");        
+}
+</script>
+<script>
+var storage = window.localStorage;
+if (!storage.getItem("credit")) storage.setItem("credit",0);
+credit = parseInt(storage.getItem("credit"));//必须格式转换
+document.getElementById("XY").innerHTML = "You have"+" "+credit+" "+"Credit Point";
+showStorage();
+</script>
+<script>
+var x=10;
+var storage = window.localStorage;
+if (!storage.getItem("pageLoadCount")) storage.setItem("pageLoadCount",0);
+storage.pageLoadCount = parseInt(storage.getItem("pageLoadCount")) + x;//必须格式转换
+document.getElementById("count").innerHTML = storage.pageLoadCount+" Coin";
+showStorage();
+</script>
+<script>
+function cheat() {
+	credit=credit+9999;
+	storage.setItem("credit",credit);
+}
+</script>
+<script>
+var storage = window.localStorage;
+if (!storage.getItem("heitie")) storage.setItem("heitie",0);
+heitie = parseInt(storage.getItem("heitie"));//必须格式转换
+document.getElementById("heitie").innerHTML = storage.heitie+"黑铁通用点";
+window.div1.innerText = "需要" + xuqiu + "黑铁点数";
+showStorage();
+</script>
+<script>
+var storage = window.localStorage;
+if (!storage.getItem("qingtong")) storage.setItem("qingtong",0);
+qingtong = parseInt(storage.getItem("qingtong"));//必须格式转换
+document.getElementById("QT").innerHTML = qingtong+"青铜通用点";
+showStorage();
+</script>
+<script>
+var storage = window.localStorage;
+if (!storage.getItem("baiyin")) storage.setItem("baiyin",0);
+baiyin = parseInt(storage.getItem("baiyin"));//必须格式转换
+document.getElementById("BY").innerHTML = baiyin+"白银通用点";
+showStorage();
+</script>
+<script>
+var storage = window.localStorage;
+if (!storage.getItem("huangjin")) storage.setItem("huangjin",0);
+huangjin = parseInt(storage.getItem("huangjin"));//必须格式转换
+document.getElementById("HJ").innerHTML = huangjin+"黄金通用点";
+showStorage();
+</script>
+<script>
+var storage = window.localStorage;
+if (!storage.getItem("zidong")) storage.setItem("zidong",0);
+zidong = parseInt(storage.getItem("zidong"));//必须格式转换
+document.getElementById("zidong").innerHTML = zidong+"个古老机器人";
+showStorage();
+</script>
+<script>
+var storage = window.localStorage;
+if (!storage.getItem("byzd")) storage.setItem("byzd",0);
+byzd = parseInt(storage.getItem("byzd"));//必须格式转换
+document.getElementById("zdby").innerHTML = byzd+"个镀银机器人";
+showStorage();
+</script>
+<script>
+var xuqiu=1;
+var h=1;
+var ht=100;
+function qingchu() {
+if(parseInt(storage.getItem("pageLoadCount")) >= ht) {
+storage.pageLoadCount = storage.pageLoadCount-ht;
+heitie=heitie+h;
+storage.setItem("heitie",heitie);
+document.getElementById("count").innerHTML = storage.pageLoadCount +"通用点";
+document.getElementById("heitie").innerHTML = heitie+"黑铁通用点";
+window.div1.innerText = "需要" + xuqiu + "黑铁点数";
+xy1500();
+}
+}
+function qingchu1() {
+if(parseInt(storage.getItem("pageLoadCount")) >= 1000) {
+storage.pageLoadCount = storage.pageLoadCount-1000;
+heitie=heitie+10;
+storage.setItem("heitie",heitie);
+document.getElementById("count").innerHTML = storage.pageLoadCount +"通用点";
+document.getElementById("heitie").innerHTML = heitie+"黑铁通用点";
+}
+}
+function qingchu2() {
+if(parseInt(storage.getItem("pageLoadCount")) >= 10000) {
+storage.pageLoadCount = storage.pageLoadCount-10000;
+heitie=heitie+100;
+storage.setItem("heitie",heitie);
+document.getElementById("count").innerHTML = storage.pageLoadCount +"通用点";
+document.getElementById("heitie").innerHTML = heitie+"黑铁通用点";
+}
+}
+function qingchu3() {
+if(parseInt(storage.getItem("pageLoadCount")) >= 100000) {
+storage.pageLoadCount = storage.pageLoadCount-100000;
+heitie=heitie+1000;
+storage.setItem("heitie",heitie);
+document.getElementById("count").innerHTML = storage.pageLoadCount +"通用点";
+document.getElementById("heitie").innerHTML = heitie+"黑铁通用点";
+}
+}
+</script>
+<script>
+function shaozhi() {
+if(parseInt(storage.getItem("heitie")) >= 100) {
+heitie=heitie-100;
+qingtong=qingtong+1;
+storage.setItem("qingtong",qingtong)
+storage.setItem("heitie",heitie);
+document.getElementById("heitie").innerHTML = heitie+"黑铁通用点";
+document.getElementById("QT").innerHTML = qingtong+"青铜通用点";
+}
+}
+function shaozhi1() {
+if(parseInt(storage.getItem("heitie")) >= 1000) {
+heitie=heitie-1000;
+qingtong=qingtong+10;
+storage.setItem("qingtong",qingtong)
+storage.setItem("heitie",heitie);
+document.getElementById("heitie").innerHTML = heitie+"黑铁通用点";
+document.getElementById("QT").innerHTML = qingtong+"青铜通用点";
+}
+}
+</script>
+</br>
+		<script>
+	setInterval(	function() 
+	{ 
+	storage.pageLoadCount=parseInt(storage.pageLoadCount) + parseInt(zidong) + parseInt(byzd)*100;
+	document.getElementById("count").innerHTML = storage.pageLoadCount+"通用点";
+	storage.setItem("pageLoadCount",storage.pageLoadCount);
+	document.getElementById("zidong").innerHTML = zidong+"个古老机器人";
+	document.getElementById("zdby").innerHTML = byzd+"个镀银机器人";
+	storage.setItem("byzd",byzd)
+	} , 1000);
+	</script>
+	</br>
+	<script>
+	function zd() {
+	if (parseInt(qingtong)>=100) {
+	qingtong=qingtong-100;
+	storage.setItem("qingtong",qingtong)
+	zidong++;
+	storage.setItem("zidong",zidong)
+	document.getElementById("zidong").innerHTML = zidong+"个古老机器人";
+	document.getElementById("QT").innerHTML = qingtong+"青铜通用点";
+	}
+	}
+	</script>
+	<script>
+	function zdby() {
+	if (parseInt(baiyin)>=100) {
+	baiyin=baiyin-100;
+	storage.setItem("baiyin",baiyin)
+	byzd++;
+	storage.setItem("byzd",byzd);
+	document.getElementById("zdby").innerHTML = zdby+"个镀银机器人";
+	document.getElementById("BY").innerHTML = baiyin+"白银通用点";
+	storage.setItem("baiyin",baiyin);
+	}
+	}
+	</script>
+	<script>
+	function wsx() {
+	storage.pageLoadCount=parseInt(storage.pageLoadCount)+5;
+	storage.setItem("pageLoadCount",storage.pageLoadCount);
+	document.getElementById("count").innerHTML = storage.pageLoadCount+"通用点";
+	xy2500();
+	}
+	</script>
+	<script>
+function baiy() {
+if(parseInt(storage.getItem("qingtong")) >= 100) {
+qingtong=qingtong-100;
+baiyin=baiyin+1;
+storage.setItem("baiyin",baiyin)
+storage.setItem("qingtong",qingtong);
+document.getElementById("QT").innerHTML = qingtong+"青铜通用点";
+document.getElementById("BY").innerHTML = baiyin+"白银通用点";
+xy1000();
+}
+}
+</script>
+	<script>
+function huangj() {
+if(parseInt(storage.getItem("baiyin")) >= 100) {
+baiyin=baiyin-100;
+huangjin=huangjin+1;
+storage.setItem("baiyin",baiyin)
+storage.setItem("huangjin",huangjin);
+document.getElementById("BY").innerHTML = baiyin+"白银通用点";
+document.getElementById("HJ").innerHTML = huangjin+"黄金通用点";
+xy100();
+}
+}
+</script>
+<script>
+function shop() {
+if(parseInt(storage.getItem("credit")) >= 1) {
+credit=credit-1;
+heitie=heitie+100;
+storage.setItem("heitie",heitie);
+storage.setItem("credit",credit);
+document.getElementById("heitie").innerHTML = heitie+"黑铁通用点";
+document.getElementById("XY").innerHTML = credit+"信用点";
+}
+}
+function shop1() {
+if(parseInt(storage.getItem("credit")) >= 2) {
+credit=credit-2;
+heitie=heitie+1000;
+storage.setItem("heitie",heitie);
+storage.setItem("credit",credit);
+document.getElementById("heitie").innerHTML = heitie+"黑铁通用点";
+document.getElementById("XY").innerHTML = credit+"信用点";
+}
+}
+function shop2() {
+if(parseInt(storage.getItem("credit")) >= 3) {
+credit=credit-3;
+heitie=heitie+10000;
+storage.setItem("heitie",heitie);
+storage.setItem("credit",credit);
+document.getElementById("heitie").innerHTML = heitie+"黑铁通用点";
+document.getElementById("XY").innerHTML = credit+"信用点";
+}
+}
+</script>
+<script>
+function xy2500() {
+var r2500=parseInt(Math.random()*2500);
+if(parseInt(Math.random()*2500)+1==1) {
+credit=credit+1;
+storage.setItem("credit",credit);
+document.getElementById("XY").innerHTML = credit+"信用点";
+}
+}
+function xy1500() {
+var r1000=parseInt(Math.random()*1000);
+if(parseInt(Math.random()*1500)+1==1) {
+credit=credit+1;
+storage.setItem("credit",credit);
+document.getElementById("XY").innerHTML = credit+"信用点";
+}
+}
+function xy1000() {
+var r1000=parseInt(Math.random()*1000);
+if(parseInt(Math.random()*1000)+1==1) {
+credit=credit+1;
+storage.setItem("credit",credit);
+document.getElementById("XY").innerHTML = credit+"信用点";
+}
+}
+function xy100() {
+var r2500=parseInt(Math.random()*1000);
+if(parseInt(Math.random()*1000)+1==1) {
+credit=credit+1;
+storage.setItem("credit",credit);
+document.getElementById("XY").innerHTML = credit+"信用点";
+}
+}
+</script>
+<h2>【商城区域】</h2>
+</br>
+<a class="wsite-button" title="每次点击获得5通用点" style="cursor:crosshair" onclick="wsx()" >
+<span class="wsite-button-inner">伪·刷新</span>
+</a>
+</br>
+<a class="wsite-button" title="用100通用点换取1黑铁通用点" style="cursor:crosshair" onclick="qingchu()" >
+<span class="wsite-button-inner">土法炼铁</span>
+</a>
+<a class="wsite-button" title="用1000通用点换取10黑铁通用点" style="cursor:crosshair" onclick="qingchu1()" >
+<span class="wsite-button-inner">正常炼铁</span>
+</a>
+<a class="wsite-button" title="用10000通用点换取100黑铁通用点" style="cursor:crosshair" onclick="qingchu2()" >
+<span class="wsite-button-inner">压缩炼铁</span>
+</a>
+<a class="wsite-button" title="用100000通用点换取1000黑铁通用点" style="cursor:crosshair" onclick="qingchu3()" >
+<span class="wsite-button-inner">高强度炼铁</span>
+</a>
+</br>
+<a class="wsite-button" title="100黑铁→→→→→1青铜" style="cursor:crosshair" onclick="shaozhi()" >
+<span class="wsite-button-inner">高炉炼铜</span>
+</a>
+<a class="wsite-button" title="1000黑铁→→→→→10青铜" style="cursor:crosshair" onclick="shaozhi1()" >
+<span class="wsite-button-inner">效率炼铜</span>
+</a>
+</br>
+<a class="wsite-button" title="100青铜→→→→→1白银" style="cursor:crosshair" onclick="baiy()" >
+<span class="wsite-button-inner">浓缩制造白银</span>
+</a>
+</br>
+<a class="wsite-button" title="100白银→→→→→1黄金" style="cursor:crosshair" onclick="huangj()" >
+<span class="wsite-button-inner">高温冲压制作黄金</span>
+</a>
+</br>
+<a class="wsite-button" title="100青铜通用点兑换一台古老机器人" style="cursor:crosshair" onclick="zd()" >
+<span class="wsite-button-inner">建造浑身铜锈的古老机器人</span>
+</a>
+</br>
+<a class="wsite-button" title="100白银通用点兑换一台镀银机器人" style="cursor:crosshair" onclick="zdby()" >
+<span class="wsite-button-inner">建造闪闪发亮的镀银机器人</span>
+</a>
+</br>
+<h2>【信用商城】</h2>
+<a class="wsite-button" title="1信用点交换100黑铁" style="cursor:crosshair" onclick="shop()" >
+<span class="wsite-button-inner">黑铁凝聚（LV1）</span>
+</a>
+<a class="wsite-button" title="2信用点交换1000黑铁" style="cursor:crosshair" onclick="shop1()" >
+<span class="wsite-button-inner">黑铁凝聚（LV2）</span>
+</a>
+<a class="wsite-button" title="3信用点交换10000黑铁" style="cursor:crosshair" onclick="shop2()" >
+<span class="wsite-button-inner">黑铁凝聚（LV3）</span>
+</a>
+<h2>Powered by Eric Liu</h2>
+<h2>All rights serve</h2>
+</body>
