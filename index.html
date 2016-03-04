@@ -17,6 +17,7 @@ document.getElementById("DIRT").innerHTML = "You have "+dirt+" dirt";
 function minedirt() {
 dirt = dirt + 1
 update()
+storage.setItem("dirt",dirt)
 }
 </script>
 <body>
