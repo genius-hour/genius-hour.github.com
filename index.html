@@ -14,7 +14,7 @@ $(document).ready(function(){
       var storage = window.localStorage;
       if (!storage.getItem("health")) storage.setItem("health",100);
       hp = parseInt(storage.getItem("health"));//必须格式转换
-      document.getElementById("HP").innerHTML = health+"health remain";
+      document.getElementById("HP").innerHTML = health+" "+"health remain";
       showStorage();
     </script>
     <meta charset="UTF-8">
