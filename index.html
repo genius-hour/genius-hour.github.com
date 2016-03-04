@@ -31,15 +31,3 @@ check()
 <body>
 <input type="button" class="b-dirt" value="Mine some dirt" onclick="minedirt()" />
 </body>
-<script>
-  function check() {
-    var button = jQuery(".b-dirt");
-    if (dirt < 100) {
-        button.removeAttr("disabled");
-    }
-    else {
-        // set the disabled attribute
-        button.attr("disabled", "true");
-    };
-}
-</script>
