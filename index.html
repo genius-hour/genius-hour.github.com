@@ -23,17 +23,9 @@ function update() {
 document.getElementById("DIRT").innerHTML = "You have "+dirt+" dirt";
 }
 function minedirt() {
-if (tool == 1) {
-dirt = dirt + 2
-update()
-storage.setItem("dirt",dirt)
-}
-
-else {
 dirt = dirt + 1
 update()
 storage.setItem("dirt",dirt)
-}
 }
 function upgrade(type) {
 if (type == "dirt") {
