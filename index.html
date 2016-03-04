@@ -55,8 +55,8 @@ function cheat() {
 var storage = window.localStorage;
 if (!storage.getItem("heitie")) storage.setItem("heitie",0);
 heitie = parseInt(storage.getItem("heitie"));//必须格式转换
-document.getElementById("heitie").innerHTML = storage.heitie+"黑铁通用点";
-window.div1.innerText = "需要" + xuqiu + "黑铁点数";
+document.getElementById("heitie").innerHTML = storage.heitie+"Iron";
+window.div1.innerText = "Require:" + xuqiu + " Iron";
 showStorage();
 </script>
 <script>
