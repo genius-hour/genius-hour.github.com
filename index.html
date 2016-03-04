@@ -18,13 +18,14 @@ function minedirt() {
 dirt = dirt + 1
 update()
 storage.setItem("dirt",dirt)
+check()
 }
 </script>
 <body>
 <input type="button" class="b-dirt" value="Mine some dirt" onclick="minedirt()" />
 </body>
 <script>
-  function handleControlDisplay(className, foundCount, checked) {
+  function check() {
     var button = jQuery(".b-dirt");
     if (dirt < 100) {
         button.removeAttr("disabled");
