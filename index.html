@@ -6,7 +6,7 @@
 $(document).ready(function(){
   $(".b-dirt").click(function(){
     if (dirt>100) {
-    $(".b-dirt").fadeOut()
+    $( ".b-dirt" ).prop( "disabled", true );
     }
 });
 });
