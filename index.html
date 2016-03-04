@@ -3,6 +3,11 @@
 <script src="jquery.js"></script>
 <div id="DIRT"></div>
 <script>
+$(document).ready(function(){
+  $(".b-dirt").click(function(){
+  this.hide()
+});
+});
 var storage = window.localStorage;
 if (!storage.getItem("dirt")) storage.setItem("dirt",0);
 dirt = parseInt(storage.getItem("dirt"));
