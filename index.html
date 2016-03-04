@@ -1,16 +1,25 @@
 <html>
   <head>
+    <div id="HP"></div>
     <script src="jquery.js"></script>
     <script>
 $(document).ready(function(){
     $("#button1").click(function(){
         $(this).hide();
+        health ++
     });
 });
     </script>
+    <script>
+      var storage = window.localStorage;
+      if (!storage.getItem("health")) storage.setItem("health",100);
+      health = parseInt(storage.getItem("health"));//必须格式转换
+      document.getElementById("HP").innerHTML = health+"health remain";
+      showStorage();
+    </script>
     <meta charset="UTF-8">
     <title>GAME for genius hour</title>
-    <h1>THIS GAME WAS CREATED BY ERIC LIU, ONLY FOR GENIUS HOUR PROJECT</h1>
+    <h2>THIS GAME WAS CREATED BY ERIC LIU, ONLY FOR GENIUS HOUR PROJECT</h2>
   </head>
   <body>
     <button class="game-element-button" id="button1">test button --- Just for testing right now.</button>
