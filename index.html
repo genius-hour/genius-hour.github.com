@@ -23,7 +23,7 @@ function update() {
 document.getElementById("DIRT").innerHTML = "You have "+dirt+" dirt";
 }
 function minedirt() {
-if (tool == "dirtshovel") {
+if (tool == 1) {
 dirt = dirt + 2
 update()
 storage.setItem("dirt",dirt)
@@ -36,10 +36,10 @@ storage.setItem("dirt",dirt)
 }
 }
 function upgrade(type) {
-if (type == 'dirt') {
+if (type == "dirt") {
 if (dirt >= 100){
-dirt=dirt-100
-var tool = "dirtshovel"
+dirt = dirt-100
+var tool = 1
 update()
 }
 }
