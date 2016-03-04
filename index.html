@@ -16,6 +16,11 @@ if (!storage.getItem("dirt")) storage.setItem("dirt",0);
 dirt = parseInt(storage.getItem("dirt"));
 document.getElementById("DIRT").innerHTML = "You have "+dirt+" dirt";
 showStorage();
+
+var storage = window.localStorage;
+if (!storage.getItem("dirt")) storage.setItem("tool,0);
+tool = parseInt(storage.getItem("tool"));
+showStorage();
 </script>
 </head>
 <script>
@@ -32,6 +37,7 @@ if (type == "dirt") {
 if (dirt >= 100){
 dirt = dirt-100
 var tool = 1
+storage.setItem("tool",tool)
 update()
 }
 }
