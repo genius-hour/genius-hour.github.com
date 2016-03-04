@@ -64,7 +64,3 @@ function save(what,param2) {
 
 	}
 }
-<div id="game-saves">
-			<input type="button" value="Export" onclick="save('export')">
-			<input type="button" value="Import" onclick="save('import')"><br>
-</div>
