@@ -10,7 +10,7 @@ function save(what,param2) {
 		save("splitter");
 	}
 	else if(what=="export") {
-		prompt("Here is your game export code:",save("string"));
+		prompt("Here is your game export code",save("string"));
 	}
 	else if(what=="import") {
 		code=prompt("Import your game code (game will be save after you import)","");
@@ -40,7 +40,7 @@ function save(what,param2) {
 		}
 	}
 	else if(what=="string") {
-		return btoa(items[0].owned+"|"+items[1].owned+"|"+items[2].owned);
+		return btoa(dirt+"|");
 		update();
 	}
 	else if(what=="splitter") {
