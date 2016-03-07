@@ -16,3 +16,8 @@ button,
 input {
     line-height: normal; /* 1 */
 }
+body.wob input[type=button] {
+	border:1px solid white;
+	background:#222;
+	color:white;
+}
