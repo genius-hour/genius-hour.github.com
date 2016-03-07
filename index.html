@@ -10,16 +10,12 @@ var storage = window.localStorage;
 if (!storage.getItem("dirt")) storage.setItem("dirt",0);
 dirt = parseInt(storage.getItem("dirt"));
 document.getElementById("DIRT").innerHTML = "You have "+dirt+" dirt";
-document.getElementById("money").innerHTML = "You have "+money+" money";
 showStorage();
 </script>
 <script>
-var storage = window.localStorage;
-if (!storage.getItem("dirt")) storage.setItem("tool",0);
-tool = parseInt(storage.getItem("tool"));
-showStorage();
 store.set("money",)
 var money = store.get("money")
+document.getElementById("money").innerHTML = "You have "+money+" money";
 </script>
 </head>
 <script>
