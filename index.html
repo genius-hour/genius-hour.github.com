@@ -4,23 +4,28 @@
 <script src="export.js"></script>
 <srcipt src="store.js"></srcipt>
 <div id="DIRT"></div>
+<div id="money"></div>
 <script>
 var storage = window.localStorage;
 if (!storage.getItem("dirt")) storage.setItem("dirt",0);
 dirt = parseInt(storage.getItem("dirt"));
 document.getElementById("DIRT").innerHTML = "You have "+dirt+" dirt";
+document.getElementById("money").innerHTML = "You have "+money+" money";
 showStorage();
 </script>
 <script>
 var storage = window.localStorage;
-if (!storage.getItem("dirt")) storage.setItem("tool,0);
+if (!storage.getItem("dirt")) storage.setItem("tool",0);
 tool = parseInt(storage.getItem("tool"));
 showStorage();
+store.set("money",)
+var money = store.get("money")
 </script>
 </head>
 <script>
 function update() {
 document.getElementById("DIRT").innerHTML = "You have "+dirt+" dirt";
+
 }
 function minedirt() {
 dirt = dirt + 1
@@ -39,6 +44,15 @@ function selldirt() {
 document.getElementById("shop").style.display="none";
 if (document.getElementById("selldirt").style.display="none") {
 document.getElementById("selldirt").style.display="inline";
+}
+}
+function sell(what) {
+if (what == "dirt") {
+dirt = dirt - 1
+store.set("dirt", dirt)
+money = money + 0.01
+store.set("money", money)
+update()
 }
 }
 </script>
