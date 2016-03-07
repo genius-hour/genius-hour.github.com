@@ -40,7 +40,7 @@ function save(what,param2) {
 		}
 	}
 	else if(what=="string") {
-		return btoa(dirt+"|");
+		return btoa(dirt+"|"+money+"|");
 		update();
 	}
 	else if(what=="splitter") {
@@ -55,6 +55,7 @@ function save(what,param2) {
 		tehcodez=atob(tehcodez).split("|");
 		
 		dirt = parseFloat(tehcodez[0]);
+		money = parseFloat(tehcodez[1]);
 		
 		if(breedinterval<1500) {
 			breedinterval+=1000;
