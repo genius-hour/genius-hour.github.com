@@ -23,6 +23,8 @@ document.getElementById("MONE").innerHTML = "You have "+money+" money";
 function update() {
 document.getElementById("DIRT").innerHTML = "You have "+dirt+" dirt";
 document.getElementById("MONE").innerHTML = "You have "+money+" money";
+storage.setItem("dirt",dirt)
+storage.setItem("money",money)
 }
 function minedirt() {
 dirt = dirt + 1
