@@ -3,7 +3,6 @@
 <link rel="stylesheet" type="text/css" href="style.css" media="all" />
 <script src="jquery.js"></script>
 <script src="export.js"></script>
-<srcipt src="store.js"></srcipt>
 <div id="DIRT"></div>
 <div id="MONE"></div>
 <script>
@@ -45,11 +44,13 @@ document.getElementById("selldirt").style.display="inline";
 }
 }
 function sellyourdirt() {
+if (dirt>=1){
 dirt = dirt - 1
 storage.setItem("dirt",dirt)
-money = money + 0.01
+money = money + 1
 storage.setItem("money",money)
 update()
+}
 }
 </script>
 <body>
@@ -60,5 +61,5 @@ update()
 			<input type="button" value="Export" onclick="save('export')">
 			<input type="button" value="Import" onclick="save('import')"><br>
 </div>
-<div id="selldirt" style="display:none">What? You want to sell dirt? Dirt was like trash here... Anyway, I'll give you one cent each</br><button style="display:inline-block;" onclick="sellyourdirt()">Sell Dirt ($0.01)</button></br></div>
+<div id="selldirt" style="display:none">What? You want to sell dirt? Dirt was like trash here... Anyway, I'll give you one dollar each</br><button style="display:inline-block;" onclick="sellyourdirt()">Sell Dirt ($1)</button></br></div>
 <div id="shop" style="display:none"><button style="display:inline-block;" onclick="selldirt()">Sell Dirt</button></div>
