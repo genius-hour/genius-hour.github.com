@@ -25,21 +25,6 @@ function minedirt() {
 dirt = dirt + 1
 update()
 storage.setItem("dirt",dirt)
-if (parseInt(storage.getItem("tool")) >= 1) {
-dirt = dirt + 1
-update()
-storage.setItem("dirt",dirt)
-}
-}
-function upgrade(type) {
-if (type == "dirt") {
-if (dirt >= 100){
-dirt = dirt-100
-tool = tool+1
-storage.setItem("tool",tool)
-update()
-}
-}
 }
 </script>
 <body>
