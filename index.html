@@ -1,10 +1,16 @@
 <meta charset="utf-8">
 <head>
+<script>
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+</script>
 <link rel="stylesheet" type="text/css" href="style.css" media="all" />
 <script src="jquery.js"></script>
 <script src="export.js"></script>
 <div id="DIRT"></div>
 <div id="MONE"></div>
+<div id="STONE"></div>
 <script>
 var storage = window.localStorage;
 if (!storage.getItem("dirt")) storage.setItem("dirt",0);
@@ -18,11 +24,20 @@ if (!storage.getItem("money")) storage.setItem("money",0);
 money = parseInt(storage.getItem("money"));
 document.getElementById("MONE").innerHTML = "You have "+money+" money";
 </script>
+<script>
+var storage = window.localStorage;
+if (!storage.getItem("stone")) storage.setItem("stone",0);
+stone = parseInt(storage.getItem("stone"));
+</script>
 </head>
 <script>
 function update() {
 document.getElementById("DIRT").innerHTML = "You have "+dirt+" dirt";
 document.getElementById("MONE").innerHTML = "You have "+money+" money";
+if (stone >= 1){
+document.getElementById("STONE").innerHTML = "You have "+stone+" stone";
+storage.setItem("stone",stone)
+}
 storage.setItem("dirt",dirt)
 storage.setItem("money",money)
 }
@@ -30,6 +45,11 @@ function minedirt() {
 dirt = dirt + 1
 update()
 storage.setItem("dirt",dirt)
+var chanceofstone = random(1, 10)
+if (chanceofstone = 1){
+stone = stone + 1
+storage.setItem("stone",stone)
+}
 }
 </script>
 <script>
