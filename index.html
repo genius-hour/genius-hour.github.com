@@ -29,21 +29,26 @@ storage.setItem("dirt",dirt)
 }
 </script>
 <script>
+function shop() {
+document.getElementById("selldirt").style.display="none";
+if (document.getElementById("shop").style.display="none") {
+document.getElementById("shop").style.display="inline";
+}
+}
 function selldirt() {
+document.getElementById("shop").style.display="none";
 if (document.getElementById("selldirt").style.display="none") {
 document.getElementById("selldirt").style.display="inline";
-}
-else {
-document.getElementById("selldirt").style.display="none";
 }
 }
 </script>
 <body>
 <input type="button" class="b-dirt" value="Mine some dirt" onclick="minedirt()" /></br>
-<button onclick="selldirt()">Open Shop</button>
+<button onclick="shop()">Open Shop</button>
 </body>
 <div id="game-saves">
 			<input type="button" value="Export" onclick="save('export')">
 			<input type="button" value="Import" onclick="save('import')"><br>
 </div>
 <div id="selldirt" style="display:none">What? You want to sell dirt? Dirt was like trash here... Anyway, I'll give you one cent each</br><button>Sell Dirt ($0.01)</button></br></div>
+<div id="shop" style="display:none"><button onclick="selldirt()">Sell Dirt</button></div>
