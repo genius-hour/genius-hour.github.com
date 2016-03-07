@@ -29,9 +29,19 @@ update()
 storage.setItem("dirt",dirt)
 }
 </script>
+<script>
+function selldirt() {
+if (document.getElementById("selldirt").style.display="none") {
+document.getElementById("mainmenudiv").style.display="inline";
+}
+else {
+document.getElementById("selldirt").style.display="none"
+}
+}
+</script>
 <body>
 <input type="button" class="b-dirt" value="Mine some dirt" onclick="minedirt()" /></br>
-<input type="button" class="u-dirt" value="upgrade to dirt shovel" onclick="upgrade('dirt')" />
+<button onclick="selldirt()">Open Shop</button>
 </body>
 <div id="game-saves">
 			<input type="button" value="Export" onclick="save('export')">
