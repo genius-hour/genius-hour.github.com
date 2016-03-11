@@ -83,14 +83,16 @@ update()
 <div id="game-saves">
 			<input type="button" value="Export" onclick="save('export')">
 			<input type="button" value="Import" onclick="save('import')"><br>
+			<input type="button" value="asdasd" onclick="asd()"><br>
 </div>
 <div id="shoplist" style="display:none">
 What? You want to sell dirt? Dirt was like trash here... Anyway, I'll give you one dollar each</br><button style="display:inline-block;" onclick="sellyourdirt()">Sell Dirt ($1)</button></br></div>
 </div>
 <div id="shop" style="display:none"><input type="button" onclick="selldirt()" value="Sell Dirt" /></div>
-<div id="xxxx"></div>
+<div id="xxxx">123</div>
 <script>
-var item = this.props.item;
+function asd() {
 xxx=ITEM_DATA[DIRT].name
 document.getElementById("xxxx").innerHTML = xxx;
+}
 </script>
