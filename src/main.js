@@ -3048,7 +3048,7 @@ var CookerComponent = React.createClass({
     },
     render:function(){
         return<div>
-                    <p>你可以使用炊具更大程度地利用食物。</p><p>将<span style = {{color:COLOR.GREEN}}>食材</span>放入空槽以烹调</p>
+                    <p>你可以使用炊具更大程度地利用食物。</p><p>将<span style = {{color:COLOR.GREEN}}>Food</span>放入空槽以烹调</p>
                     <div>
                         <BoxComponent box = 'cooker'/>
                         {' => '}
