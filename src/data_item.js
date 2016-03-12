@@ -1,83 +1,17 @@
 //所有物品的数据
 var ITEM_DATA = {
-//道具
-    evilBook:{
-        name:'偷窃宝典',
-        type:'tool',
-        desc:"记录了如何在银溪镇进行掠夺。",
-        canUse:false,
-        value:0,
-    },
-    traces:{
-        name:'蛛丝马迹',
-        type:'tool',
-        desc:"盗贼偷窃后留下的痕迹。",
-        canUse:false,
-        value:0,
-    },
     security:{
-        name:'抵价券',
+        name:'Dollar',
         type:'tool',
-        desc:"商人赠送的用于交易的券。",
+        desc:"It's just money",
         canUse:false,
         value:30,
     },
     scroll:{
-        name:'回城卷轴',
+        name:'scroll',
         type:'tool',
-        desc:"可以瞬间传送回家。",
+        desc:"Go Back to home",
         sound:'scroll',
-        canUse:true,
-    },
-    energyBall:{
-        name:'充能卷轴',
-        durableRec:'magic',
-        durableAmount:1,
-        type:'tool',
-        desc:"为你的所有法杖充能。",
-        sound:'scroll',
-        canUse:true,
-    },
-    durableBall:{
-        name:'石化卷轴',
-        durableRec:'unmagic',
-        durableAmount:1,
-        type:'tool',
-        desc:"为你的法杖以外的武器恢复所有耐久度。",
-        sound:'scroll',
-        canUse:true,
-    },
-    dungeonRope:{
-        name:'穿洞绳',
-        type:'tool',
-        desc:"能够向下移动到地牢之前到过的任何深度。",
-    },
-    dungeonKey:{
-        name:'钥匙',
-        type:'tool',
-        desc:"能够打开地牢内的门或者宝箱。",
-        value:20,
-    },
-//食物
-    fishBall:{
-        name:'鱼丸',
-        type:'cooked',
-        desc:'经过加工的海鲜。',
-        effect:{full:25},
-        canUse:true,
-    },
-    jellyfish:{
-        name:'水母',
-        type:'food',
-        desc:'水汪汪的海鲜。',
-        effect:{moist:40,full:1,hp:-2},
-        canUse:true,
-    },
-    rowJellyfish:{
-        name:'海蜇皮',
-        type:'cooked',
-        desc:'水汪汪的海鲜。',
-        effect:{moist:45,full:2,san:8},
         canUse:true,
     },
     seafood:{
