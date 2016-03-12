@@ -129,9 +129,9 @@ var ITEM_DATA = {
         canUse:true
     },
     bread:{
-        name:'面包',
+        name:'Bread',
         type:'food',
-        desc:'可以充饥。',
+        desc:'It is a food',
         effect:{full:15},
         canUse:true
     },
@@ -1001,10 +1001,10 @@ var ITEM_DATA = {
         require:{ps:2},
     },
     axe:{
-        name:'斧头',
+        name:'Axe',
         type:'weapon',
         weaponType:'melee',
-        desc:'伐木工具,同时是不错的近战武器。',
+        desc:'Tool used to chop the tree, also used as weapon',
         damage:12,
         range:2,
         durable:20,
