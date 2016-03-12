@@ -45,15 +45,15 @@ var MSG_TIME = 2000;
 
 var TYPE_DATA = {
     'quest':{
-        name:"特殊",
+        name:"Quest",
         color:'#ADAD73'
     },
     'special':{
-        name:"技能提升",
+        name:"Skill",
         color:'#ADAD73'
     },
     'equip':{
-        name:"装备",
+        name:"Equipment",
         color:'#7E3558'
     },
     'food':{
@@ -65,31 +65,31 @@ var TYPE_DATA = {
         color:'#DD6820'
     },
     'cooked':{
-        name:"食品",
+        name:"Food",
         color:'#A67575'
     },
     'bullet':{
-        name:"弹药",
+        name:"Ammo",
         color:COLOR.YELLOW,
     },
     'met':{
-        name:"材料",
+        name:"Material",
         color:COLOR.GREEN,
     },
     'poizon':{
-        name:"药剂",
+        name:"Potion",
         color:'#AB6DAB'
     },
     'tool':{
-        name:"工具",
+        name:"Tool",
         color:'#222222'
     },
     'art':{
-        name:'工艺品',
+        name:'Art',
         color:'#116666'
     },
     '?':{
-        name:"未知",
+        name:"???",
         color:'#000000'
     },
 };
@@ -384,7 +384,7 @@ var BUILDING_UPDATE_DATA = {
 }
 var TRAP_DATA = {
     antiRogue:{
-        desc:'[防盗]',
+        desc:'[Anti-Thief]',
         require:{gold:1,teeth:2},
         itemGet:{
             'humanMeat':2,
@@ -393,7 +393,7 @@ var TRAP_DATA = {
         science:'antiRogue',
     },
     meatTrap:{
-        desc:'[生肉]',
+        desc:'[Meat]',
         require:{'meat':1},
         itemGet:{
             'meat':2,
@@ -402,7 +402,7 @@ var TRAP_DATA = {
         chance:0.2,
     },
     fruitTrap:{
-        desc:'[浆果]',
+        desc:'[Berry]',
         require:{'fruit':2},
         itemGet:{
             'meat':2,
@@ -411,7 +411,7 @@ var TRAP_DATA = {
         chance:0.3,
     },
     vegTrap:{
-        desc:'[生菜]',
+        desc:'[Vegetable]',
         require:{'veg':2},
         itemGet:{
             'meat':2,
@@ -420,7 +420,7 @@ var TRAP_DATA = {
         chance:0.3,
     },
     carrotTrap:{
-        desc:'[胡萝]',
+        desc:'[Carrot]',
         require:{'carrot':2},
         itemGet:{
             'meat':2,
@@ -429,7 +429,7 @@ var TRAP_DATA = {
         chance:0.3,
     },
     seedTrap:{
-        desc:'[种子]',
+        desc:'[Seed]',
         require:{'seed':2},
         itemGet:{
             'meat':2,
@@ -440,7 +440,7 @@ var TRAP_DATA = {
 }
 var CROP_DATA = {
     wheatCrop:{
-        desc:'[小麦]',
+        desc:'[Wheat]',
         timeMax:96,
         timeNeed:1,
         require:{'fertilizer':4,'seed':10,'water':2,'hoe':1},
@@ -448,7 +448,7 @@ var CROP_DATA = {
         itemAmount:24,
     },
     fruitCrop:{
-        desc:'[浆果]',
+        desc:'[Berry]',
         timeMax:96,
         timeNeed:1,
         require:{'fertilizer':4,'seed':10,'water':2,'hoe':1},
@@ -456,7 +456,7 @@ var CROP_DATA = {
         itemAmount:24,
     },
     vegCrop:{
-        desc:'[生菜]',
+        desc:'[Vegetable]',
         timeMax:96,
         timeNeed:1,
         require:{'fertilizer':4,'seed':10,'water':2,'hoe':1},
@@ -464,7 +464,7 @@ var CROP_DATA = {
         itemAmount:24,
     },
     carrotCrop:{
-        desc:'[胡萝]',
+        desc:'[Carrot]',
         timeMax:96,
         timeNeed:1,
         require:{'fertilizer':4,'seed':10,'water':2,'hoe':1},
@@ -472,7 +472,7 @@ var CROP_DATA = {
         itemAmount:24,
     },
     herbCrop:{
-        desc:'[草药]',
+        desc:'[Herb]',
         timeMax:88,
         timeNeed:1,
         require:{'fertilizer':4,'seed':10,'water':2,'hoe':1},
