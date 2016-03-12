@@ -1714,15 +1714,15 @@ var TrampComponent = React.createClass({
     render:function(){
         var playerGive = this.context.boxSaveData.register.things;
         var value = this.checkFood();
-        var header = '-流浪汉-';
+        var header = '-Tramp-';
         var eventSaveData = this.context.eventSaveData;
         var foodGot = eventSaveData.tramp['foodGot'];
         if(!this.state.over){
             return <div>
                         <p>{header}</p>
-                        {value == 0?(getLength(playerGive) == 0?<p>求你了，能不能给我一点食物。。。</p>:<p>拜托..我要食物啊...</p>):(foodGot + value> this.maxFood ? <p>太感谢了，上帝保佑你...</p> :<p>谢谢你...还有吗...</p>)}
+                        {value == 0?(getLength(playerGive) == 0?<p>Please... Can I have some foods?</p>:<p>拜托..我要食物啊...</p>):(foodGot + value> this.maxFood ? <p>太感谢了，上帝保佑你...</p> :<p>谢谢你...还有吗...</p>)}
                         <RegisterComponent itemList = {{}} canBack = {false} onlyOne = {true} canBeEmpty = {true} canPick = {false}/>
-                        {value == 0?<BtnBack/>:<BtnComponent handleClick={this.giveFood} desc = {'施舍'} />}
+                        {value == 0?<BtnBack/>:<BtnComponent handleClick={this.giveFood} desc = {'Give'} />}
                     </div>;
             }else{
                 if(foodGot > this.maxFood){
@@ -3420,14 +3420,14 @@ var PlaceComponent = React.createClass({
                 return 'rgb(' + r + ',' + g + ',' + b + ')';
             }
             function getDesc(){
-                if(speed == 0)  return '停止';
-                if(speed <= 0.1)return '非常慢';
-                if(speed <= 0.2)return '很慢';
-                if(speed <= 0.3)return '较慢';
-                if(speed <= 0.4)return '一般';
-                if(speed <= 0.5)return '很快';
-                if(speed <= 1)  return '较快';
-                return '非常快';
+                if(speed == 0)  return 'Stop';
+                if(speed <= 0.1)return 'Extemely Slow';
+                if(speed <= 0.2)return 'Veyr Slow';
+                if(speed <= 0.3)return 'Slow';
+                if(speed <= 0.4)return 'Normal';
+                if(speed <= 0.5)return 'Fast';
+                if(speed <= 1)  return 'Very Fast';
+                return 'Extremely Fast';
             }
             return <span style = {{color:getColor()}}>{getDesc()}</span>
         };
@@ -3476,7 +3476,7 @@ var PlaceComponent = React.createClass({
             var result = [];
             var mstList = placeData.mst;
             //按钮信息
-            var huntDesc = PLACE_DATA[name].huntDesc || '狩猎';
+            var huntDesc = PLACE_DATA[name].huntDesc || 'Hunting';
             result.push(<tr key = {'resource_mst'}>
                             <td>{huntDesc}</td>
                             <td colSpan = {3}><ResourceDisplayComponent type = 'mst' resource = {mstList}/></td>
@@ -3495,7 +3495,7 @@ var PlaceComponent = React.createClass({
                 if(eventSaveData[attr].experienced)continue;
                 var data = EVENT_DATA[attr];
                 if(data.event && !eventSaveData[data.event].experienced)continue;
-                result.push(<tr key = {'event_' + attr}><td>{data.name}</td><td colSpan = '4'>{data.desc}</td><td><BtnComponent  handleClick = {this.handleEvent.bind(this,attr)} desc = {data.btn || '对话'} /></td></tr>);
+                result.push(<tr key = {'event_' + attr}><td>{data.name}</td><td colSpan = '4'>{data.desc}</td><td><BtnComponent  handleClick = {this.handleEvent.bind(this,attr)} desc = {data.btn || 'Talk'} /></td></tr>);
             }
             return result;
         }
@@ -3503,7 +3503,7 @@ var PlaceComponent = React.createClass({
             if(!this.getPermittion())return null;
             //设置拾荒
             if(!getLength(placeData.things))return null;
-            var pickDesc = PLACE_DATA[name].pickDesc || '拾荒';
+            var pickDesc = PLACE_DATA[name].pickDesc || 'Searching';
             var pickRequire = PLACE_DATA[name].pickRequire || {};
             if(!pickRequire.ps)pickRequire.ps = 3;
             var disabled = !this.context.checkHaveResourceAll(pickRequire);
@@ -3531,7 +3531,7 @@ var PlaceComponent = React.createClass({
         var haveResources = getLength(placeData.resource)>0;
         return  <div className = "tableOuter">
                     <table className="table table-condensed table-hover">
-                    {this.getPermittion() && haveResources?<thead><tr><td>资源</td><td>总量</td><td>生长</td><td>获得物品</td><td>需要</td><td></td></tr></thead>:null}
+                    {this.getPermittion() && haveResources?<thead><tr><td>Resource</td><td>Total</td><td>Grow</td><td>Item</td><td>Require</td><td></td></tr></thead>:null}
                     <tbody>
                         {getEntry.bind(this)()}
                         {getRecources.bind(this)()}

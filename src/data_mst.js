@@ -151,7 +151,7 @@ var MST_DATA = {
     },
     scaryFlower:{
         maxHp:35,
-        name:'藤鞭怪',
+        name:'Scary Flower',
         damage:4,
         range:3,
         reward:{fruit:2,seed:2,cirrus:2},
@@ -203,7 +203,7 @@ var MST_DATA = {
     },
     butterFly:{
         maxHp:32,
-        name:'麻雀',
+        name:'Bird',
         damage:2,
         range:10,
         reward:{wing:1,feather:1,seed:2},
