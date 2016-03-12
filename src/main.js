@@ -462,7 +462,7 @@ var ResourceDisplayComponent = React.createClass({
         var type = this.props.type;
         //清算资源富集程度
         function getAmountDesc (amount){
-            var arr = ['很少','较少','一般','较多','大量'];
+            var arr = ['Little','Few','Normal','Many','Huge'];
             for (var i = 0; i < arr.length - 1; i++) {
                 if(amount < i*10 + 10)
                 return arr[i];
