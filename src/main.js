@@ -2733,7 +2733,7 @@ var BuildComponent = React.createClass({
         return  <div>
                     <div  className = "tableOuter buildTable">
                         <table className = "table table-condensed table-hover">
-                            <thead><tr><td>Build</td><td>Require</td><td>Desc</td><td>Time/td><td></td></tr></thead>
+                            <thead><tr><td>X</td><td>X</td><td>X</td><td>Time</td><td></td></tr></thead>
                             <tbody>
                                 {getRow.bind(this)()}
                             </tbody>
