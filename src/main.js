@@ -2,12 +2,7 @@ function Text(fn) {
     return fn.toString().split('\n').slice(1,-1).join('\n') + '\n'
 }
 var mainjs=Text(function(){/*
-//《超苦逼冒险者》
-//使用框架：React，jQuery
-//作者：maou
-//联系方式：496863906@qq.com
-
-
+X
 'use strict';
 // var move=function(e){
 //     e.preventDefault && e.preventDefault();
@@ -1113,8 +1108,8 @@ var BagComponent = React.createClass({
                         <p className = "detailVector effectHeading clearFix">
                             {equipShow || TYPE_DATA[ITEM_DATA[detailedItem].type].name}
                         </p>
-                        {(!IS_IPAD && ITEM_DATA[detailedItem].canUse)?<p className = "detailVector effectHeading clearFix" >右键使用</p> : null}
-                        {maxDurable != undefined?<div className = "detailVector effectHeading clearFix" >耐久度：{maxDurable - durable}/{maxDurable}</div> : null}
+                        {(!IS_IPAD && ITEM_DATA[detailedItem].canUse)?<p className = "detailVector effectHeading clearFix" >Right-Click to use</p> : null}
+                        {maxDurable != undefined?<div className = "detailVector effectHeading clearFix" >Durability: {maxDurable - durable}/{maxDurable}</div> : null}
                         <div className = "detailVector detailDesc">
                             {ITEM_DATA[detailedItem].desc}
                             {(IS_IPAD && ITEM_DATA[detailedItem].canUse)?<BtnComponent disabled = {!this.getItemBoxFromDetail()} handleClick = {this.useItemFromDetail}>使用</BtnComponent>:null}
