@@ -208,17 +208,17 @@ var ITEM_DATA = {
         canUse:true
     },
     carrot:{
-        name:'胡萝卜',
+        name:'Carrot',
         type:'food',
         effect:{full:6,hp:1},
-        desc:'胡萝卜对你的生命健康很有好处。',
+        desc:'Good for your body',
         canUse:true
     },
     fruit:{
-        name:'浆果',
+        name:'Berry',
         type:'food',
         effect:{moist:4,full:3},
-        desc:'可以解渴的食物。',
+        desc:'Good Food',
         canUse:true
     },
     ice:{
