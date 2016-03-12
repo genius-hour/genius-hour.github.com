@@ -157,8 +157,8 @@ var EVENT_DATA = {
         desc:'嗯..新来的？',
     },
     tramp:{
-        name:'饥饿的流浪汉',
-        desc:'救命...',
+        name:'Hungery Tramp',
+        desc:'Help...',
     },
     farmer_1:{
         name:'农场主',

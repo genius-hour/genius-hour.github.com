@@ -1007,7 +1007,7 @@ var RegisterComponent = React.createClass({
         return  <div>
                     {this.props.canBack?<BtnBack callBack = {this.props.willUnmount || null}/>:null}
                     <BoxComponent isRegister = {true} box = 'register' itemList = {things} handleClick = {this.check}/>
-                    {this.props.canPick?<BtnComponent sound = 'pickall' disabled = {disabled} handleClick = {this.grabAll} desc = '全部拾取'/>:null}
+                    {this.props.canPick?<BtnComponent sound = 'pickall' disabled = {disabled} handleClick = {this.grabAll} desc = 'Pick them up'/>:null}
                 </div>
     }
 });
@@ -1427,7 +1427,7 @@ var StudioComponent = React.createClass({
                         <div className = 'viewOuter'>
                             <div className = "tableOuter studioTableOuter" style = {{maxHeight:this.state.displayWindow?'200px':(324 - 52 -58+46) +'px'}}>
                                 <table className="table table-condensed table-hover ">
-                                    <thead><tr><td>成品</td><td>需求</td><td>描述</td></tr></thead>
+                                    <thead><tr><td>成品</td><td>Require</td><td>Desc</td></tr></thead>
                                     <tbody>
                                         {result}
                                     </tbody>
@@ -1460,7 +1460,7 @@ var StudioComponent = React.createClass({
                                 <td><RequireComponent requireList = {tmp.require} haveBox = {true}/></td>
                                 <td>{ITEM_DATA[attr].desc}</td>
                                 <td>
-                                    <BtnComponent disabled = {disabled} handleClick = {this.updateBuilding.bind(this,attr)} desc = "升级" />
+                                    <BtnComponent disabled = {disabled} handleClick = {this.updateBuilding.bind(this,attr)} desc = "Upgrade" />
                                 </td>
                             </tr>);
                 count ++;
@@ -1653,7 +1653,7 @@ var ActionComponent = React.createClass({
         var hasCooledDown = (coolDown == 0 || coolDown == undefined);
         return <div className = 'schedule'>
                             <table className="table table-hover ">
-                                <thead><tr>{require?<td>需求</td>:null}<td>获得</td><td>耗时</td><td></td></tr></thead>
+                                <thead><tr>{require?<td>Require</td>:null}<td>Got</td><td>Time</td><td></td></tr></thead>
                                 <tbody><tr>
                                     {require?<td><RequireComponent haveBox = {true} requireList = {cloneMul(require,this.state.timeNeed)}/></td>:null}
                                     <td><RequireComponent isGreen = 'true' requireList = {canGet}/></td>
@@ -3027,7 +3027,7 @@ var TrapComponent = React.createClass({
                     </div>
                     <div className = "tableOuter trapTableOuter">
                         <table className="table table-condensed table-hover">
-                            <thead><tr><td>陷阱</td><td>需求</td><td>捕获几率/日</td><td>收益</td><td></td></tr></thead>
+                            <thead><tr><td>Trap</td><td>Require</td><td>Catch Possibility/ Day</td><td>Earn</td><td></td></tr></thead>
                             <tbody>
                                 {getTrapTypeDesc.bind(this)()}
                             </tbody>
@@ -3104,7 +3104,7 @@ var ToiletComponent = React.createClass({
                         <ActionComponent coolDown = {48} action = 'shit' type = 'shit' canGet = {shitCanGet} timeNeed = {1} desc = '排便'/>
                     </div>
                     <div>
-                        {level>0&&season=='winter'?<p>在冬天洗澡，你需要额外的燃料。</p>:null}
+                        {level>0&&season=='winter'?<p>You need fuel to bath in winter</p>:null}
                         {level>0?<ActionComponent coolDown = {24} action = 'shower' canGet = {showerCanGet} require = {season=='winter'?{water:4,wood:2}:{water:4}} timeNeed = {1} desc = '洗澡'/>:null}
                     </div>
                     <div>
@@ -3132,11 +3132,11 @@ var SleepPlaceComponent = React.createClass({
     render:function(){
         function getLevelDesc(level){
             var map = {
-                0:'地板',
-                1:'木床',
-                2:'凉席',
-                3:'高级床',
-                4:'特级床',
+                0:'Floor',
+                1:'Wooden Bed',
+                2:'Cool Bed',
+                3:'Bed',
+                4:'Advance Bed',
             }
             return map[level];
         }
@@ -3158,21 +3158,21 @@ var SleepPlaceComponent = React.createClass({
 
         function getSeasonDesc(){
             if(disabled){
-                return <p>在寒冷的冬天，如果我不烧点柴火睡觉的话，我会冻死的（需要科技<span style = {{color:COLOR.BLUE}}>[火炕]</span>）。</p>;
+                return <p>In this cold winter, if I didn't sleep with fire on, I'm gonna DIED!（You need tech:<span style = {{color:COLOR.BLUE}}>[Fire]</span>）。</p>;
             }else{
                 if(season == 'winter'){
-                    return <p>在冬天睡觉需要燃料。</p>
+                    return <p>You need fuel to sleep in winter</p>
                 }
             }
         }
         var props = season=='winter'?{temp:10}:{};
         return  <div>
                     <div>
-                        当前床铺等级：<span style = {{color:COLOR.BLUE}}>[{getLevelDesc(this.context.getBuildingLevel('sleepPlaceUpdate'))}]</span>
+                        Current Bed Level：<span style = {{color:COLOR.BLUE}}>[{getLevelDesc(this.context.getBuildingLevel('sleepPlaceUpdate'))}]</span>
                     </div>
                     <div>
                         {getSeasonDesc()}
-                        {!disabled?<ActionComponent disabled = {disabled} type = 'sleep'  require = {season=='winter'?{wood:1}:{}}  canGet = {sleepCanGet} props = {props} changable = {true} desc = '睡觉'/>:<div className = 'schedule'><table className = 'table'><thead><tr><td>无法使用</td></tr></thead></table></div>}
+                        {!disabled?<ActionComponent disabled = {disabled} type = 'sleep'  require = {season=='winter'?{wood:1}:{}}  canGet = {sleepCanGet} props = {props} changable = {true} desc = 'Sleep'/>:<div className = 'schedule'><table className = 'table'><thead><tr><td>无法使用</td></tr></thead></table></div>}
                         {null}
                     </div>
                     <StudioComponent isBuildingUpdate = {true} type = 'sleepPlaceUpdate'/>

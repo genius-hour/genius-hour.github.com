@@ -75,9 +75,6 @@ var PLACE_DATA = {
         science:'upgradePlace',
     },
     forest:{
-        event:{
-            tramp:true
-        },
         name:'Silent Forest',
         resource:{
             tree:{
