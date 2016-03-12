@@ -1728,20 +1728,20 @@ var TrampComponent = React.createClass({
                 if(foodGot > this.maxFood){
                     return <div>
                                 <p>{header}</p>
-                                <p>我感觉好多了。</p>
+                                <p>I feel so much better</p>
                                 <p>--------</p>
-                                <p>流浪汉递给你一张<span style = {{color:COLOR.GREEN}}>[小镇]</span>的地图。</p>
-                                <p>流浪汉扬长而去....</p>
+                                <p>Tramp gave you<span style = {{color:COLOR.GREEN}}>[Arcadia]</span>map</p>
+                                <p>Tamp was gone....</p>
                                 <BtnBack/>
                             </div>;
                 }else{
                     var sanGet = Math.ceil(value/5);
                     return <div>
                                 <p>{header}</p>
-                                <p>上帝保佑你...</p>
-                                <p>如果你有更多的食物，可以下次再带给我一点吗？</p>
+                                <p>God bless you...</p>
+                                <p>Can you give me more food if you have some</p>
                                 {sanGet?<p>--------</p>:null}
-                                {sanGet?<p>你获得了{<RequireComponent isGreen = {true} requireList = {{san:Math.ceil(value/5)}} />}</p>:null}
+                                {sanGet?<p>{<RequireComponent isGreen = {true} requireList = {{san:Math.ceil(value/5)}} />}</p>:null}
                                 <BtnBack/>
                             </div>;
                 }
@@ -1831,8 +1831,8 @@ var QuestComponent = React.createClass({
                     <div>
                         {this.props.children && this.props.children[1] || data.d_2}
                         {itemList?<RegisterComponent canBack = {false} canBeEmpty = {true} itemList = {itemList} willUnmount = {callBack.bind(this)||null}/>:null}
-                        {learn?<div><p>--------</p><p>你学会了[<span style = {{color:COLOR.YELLOW}}>{learn}</span>]的制作。</p></div>:null}
-                        {place?<div><p>--------</p><p>在地图上标出了[<span style = {{color:COLOR.YELLOW}}>{place}</span>]的位置。</p></div>:null}
+                        {learn?<div><p>--------</p><p>You have learned[<span style = {{color:COLOR.YELLOW}}>{learn}</span>]的制作。</p></div>:null}
+                        {place?<div><p>--------</p><p>You can goto [<span style = {{color:COLOR.YELLOW}}>{place}</span>]的位置。</p></div>:null}
                         <BtnBack  callBack = {callBack.bind(this)||null}/>
                      </div>
                  )
