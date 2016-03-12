@@ -236,10 +236,10 @@ var ITEM_DATA = {
         canUse:true
     },
     herb:{
-        name:'草药',
+        name:'Herb',
         type:'food',
         effect:{hp:6,full:1},
-        desc:'可以治病的植物。',
+        desc:'Can heal you',
         canUse:true
     },
     alco:{
