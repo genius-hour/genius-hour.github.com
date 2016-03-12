@@ -3730,7 +3730,7 @@ var BranchComponent = React.createClass({
         return  <div>
                     <div className = "branch">
                         <table style = {{marginBottom:0,paddingBottom:0}} className="table table-condensed table-hover">
-                            <thead><tr><td>地点</td><td>资源</td><td>耗时</td><td></td></tr></thead>
+                            <thead><tr><td>Place</td><td>Resource</td><td>Time</td><td></td></tr></thead>
                             <tbody>
                                 {getPlaceDisplay.bind(this)()}
                             </tbody>
