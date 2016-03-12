@@ -160,7 +160,7 @@ var MST_DATA = {
     },
     crow:{
         maxHp:45,
-        name:'乌鸦',
+        name:'Crow',
         damage:4,
         range:24,
         reward:{meat:2,wing:2},

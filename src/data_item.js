@@ -251,17 +251,17 @@ var ITEM_DATA = {
         isDrink:true,
     },
     flower:{
-        name:'花',
+        name:'Flower',
         type:'food',
         effect:{hp:1,san:1},
-        desc:'一朵不起眼的鲜花。',
+        desc:'Just a flower',
         canUse:true
     },
     seed:{
-        name:'种子',
+        name:'Seed',
         type:'food',
         effect:{full:1},
-        desc:'一颗小种子，放入田地即可生根发芽。',
+        desc:'You can eat it, or plant it',
         canUse:true
     },
     jam:{
@@ -723,15 +723,15 @@ var ITEM_DATA = {
         value:10,
     },
     poizonRoot:{
-        name:'毒根',
+        name:'Poison Root',
         type:'met',
-        desc:'带有剧毒的药材。',
+        desc:'A root with poison',
         value:10,
     },
     fur:{
-        name:'毛皮',
+        name:'Fur',
         type:'met',
-        desc:'毛皮可以做衣服。',
+        desc:'Use to making cloth',
         value:20,
     },
     soul:{

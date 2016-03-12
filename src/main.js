@@ -3909,19 +3909,19 @@ var BattleChoiceComponent = React.createClass({
                 //武器类型
                 var type = ITEM_DATA[selectedWeapon].weaponType;
                 var typeDesc = {
-                    melee:'攻击',
-                    shoot:'射击',
-                    magic:'施放',
+                    melee:'Attack',
+                    shoot:'Shoot',
+                    magic:'Use',
                 }
                 //武器使用费用
                 var require = this.props.getRequire(selectedWeapon);
 
                 result.push(<tr key = {index}>
                                 <td><SelectComponent defaultV = {selectedWeapon} handleChange = {this.handleChange} index = {index}>{getOptions(index)}</SelectComponent></td>
-                                <td>射程优势(<span style = {{color:chance>0?COLOR.GREEN:COLOR.RED}}>{Math.ceil(chance*100)}%</span>)</td>
+                                <td>Range Advantage(<span style = {{color:chance>0?COLOR.GREEN:COLOR.RED}}>{Math.ceil(chance*100)}%</span>)</td>
                                 <td><RequireComponent requireList = {require}/></td>
                                 <td><span className = 'damage'>{this.props.getDamage(selectedWeapon)}</span> vs <span className = 'damage'>{this.props.mstDmg}</span></td>
-                                <td><BtnComponent desc = {typeDesc[type]||'攻击'} disabled = {this.checkWeaponDisabled.bind(this,selectedWeapon)()} handleRightClick = {this.handleInterval.bind(null,index)} handleClick = {this.props.handleAttack.bind(null,selectedWeapon)}/></td>
+                                <td><BtnComponent desc = {typeDesc[type]||'Attack'} disabled = {this.checkWeaponDisabled.bind(this,selectedWeapon)()} handleRightClick = {this.handleInterval.bind(null,index)} handleClick = {this.props.handleAttack.bind(null,selectedWeapon)}/></td>
                             </tr>);
             };
             return  result;
@@ -3929,10 +3929,10 @@ var BattleChoiceComponent = React.createClass({
         function getRunRow(index){
                 return  <tr>
                             <td></td>
-                            <td colSpan = {1}>成功几率({(Math.round(this.props.getRunChance()*100))}%)</td>
+                            <td colSpan = {1}>Succest Chance({(Math.round(this.props.getRunChance()*100))}%)</td>
                             <td></td>
                             <td><span className = 'damage'>0</span> vs <span className = 'damage'>{this.props.mstDmg}</span></td>
-                            <td><BtnComponent desc = '跑路' handleClick = {this.props.handleRun}/></td>
+                            <td><BtnComponent desc = 'Run' handleClick = {this.props.handleRun}/></td>
                         </tr>
         }
         return <div>
@@ -4277,7 +4277,7 @@ var BattleComponent = React.createClass({
         function getRec(){
             var result = [];
             for(var attr in rec){
-                result.push(<span>你回复了<span style = {{color:COLOR.GREEN}}>{Math.round(rec[attr])}</span>点{STATE_DATA[attr].name}。</span>);
+                result.push(<span>You heal<span style = {{color:COLOR.GREEN}}>{Math.round(rec[attr])}</span>hp{STATE_DATA[attr].name}。</span>);
             }
             return <span key = {'rec_'+attr+this.step}>
                         {result}
@@ -4288,7 +4288,7 @@ var BattleComponent = React.createClass({
             this.context.playerStateUse(o(weapon,1));
             playerSuccess?this.context.mstStateChange({hp:-playerDmg}):null;
             var show = [];
-            show.push(playerSuccess?<span key = {'p_atk_'+this.step}>你造成了<span style = {{color:COLOR.GREEN}}>{playerDmg}</span>点伤害！</span>:<span key = {'p_atk_'+this.step} style = {{color:COLOR.RED}}>你打歪了！</span>);
+            show.push(playerSuccess?<span key = {'p_atk_'+this.step}>You deal <span style = {{color:COLOR.GREEN}}>{playerDmg}</span>Damage！</span>:<span key = {'p_atk_'+this.step} style = {{color:COLOR.RED}}>你打歪了！</span>);
             if(this.context.mstState.hp > 0){
                 show.push(mstSuccess?<span key = {'m_atk_'+this.step}>你受到了<span style = {{color:COLOR.RED}}>{enermyDmg}</span>点伤害！</span>:<span key = {'m_atk_'+this.step} style = {{color:COLOR.GREEN}}>{MST_DATA[this.props.mst].name}{getMstDo()}</span>);
                 show.push(getRec.bind(this)());
@@ -4388,7 +4388,7 @@ var BattleComponent = React.createClass({
         var playerHp = this.context.playerState['hp'].amount;
         var mst = this.context.mstState;
         return  <div className = "battleField">
-                    <BattleCharactorComponent name = '你' maxHp = {this.context.getMaxState('hp')} currentHp = {playerHp}/>
+                    <BattleCharactorComponent name = 'You' maxHp = {this.context.getMaxState('hp')} currentHp = {playerHp}/>
                     &nbsp;<span className="vs">vs</span>&nbsp;
                     <BattleCharactorComponent  name = {mst.name} maxHp = {mst.maxHp} currentHp = {mst.hp} prefix = {this.props.prefix}/>
                     <BattleChoiceComponent getRequire = {this.getRequire} getRunChance = {this.getRunChance} getChance = {this.getChance} handleAttack = {this.handleAttack} handleRun = {this.handleRun} getDamage = {this.getPlayerDamage} mstDmg = {this.getMstDamage(this.context.mstState.damage)}/>
