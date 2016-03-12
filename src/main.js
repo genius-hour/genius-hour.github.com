@@ -3567,7 +3567,7 @@ var HomeComponent = React.createClass({
         setStateFromChildren: React.PropTypes.func.isRequired,
     },
     componentWillMount:function(){
-        this.context.setTitle('家');
+        this.context.setTitle('Home');
     },
     handleGoOut:function(){
         this.context.setCurrentScene('branch');
