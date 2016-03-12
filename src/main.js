@@ -4949,25 +4949,25 @@ var AdvanComponent = React.createClass({
             var str = "";
             var hour = Math.floor(time);
             if(hour < 2){
-                str += "半夜";
+                str += "Midnight";
             }else{
                 if(hour < 5){
-                    str += "凌晨";
+                    str += "Dawn";
                 }else{
                     if(hour < 10){
-                        str += "早晨";
+                        str += "Morning";
                     }else{
                         if(hour < 13){
-                            str += "中午";
+                            str += "Noon";
                         }else{
                             if(hour < 17){
-                                str += "下午";
+                                str += "Afternoon";
                             }else{
                                 if(hour < 19){
-                                    str += "傍晚";
+                                    str += "Evening";
                                 }else{
                                     if(hour < 22){
-                                        str += "晚上";
+                                        str += "Night";
                                     }else{
                                         str += "深夜";
                                     }
