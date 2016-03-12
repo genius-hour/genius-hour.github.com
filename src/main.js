@@ -2,7 +2,6 @@ function Text(fn) {
     return fn.toString().split('\n').slice(1,-1).join('\n') + '\n'
 }
 var mainjs=Text(function(){/*
-X
 'use strict';
 // var move=function(e){
 //     e.preventDefault && e.preventDefault();
