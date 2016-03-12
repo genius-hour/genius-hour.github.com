@@ -411,7 +411,7 @@ var BtnBack = React.createClass({
                 this.props.callBack();
             }
         }
-        return <BtnComponent disabled = {this.props.disabled} handleClick = {callBack.bind(this)} desc = '返回'/>
+        return <BtnComponent disabled = {this.props.disabled} handleClick = {callBack.bind(this)} desc = 'Back'/>
     }
 });
 var BtnHome = React.createClass({
@@ -1156,8 +1156,7 @@ var BagComponent = React.createClass({
         }
         return  <div className="panel panel-primary equipMain">
                     <div className="panel-heading">
-                        背包
-                    </div>
+                        Backpack                    </div>
                     <div className="panel-body  clearFix">
                         <div className = "equip" id = "equip">
                             <BoxComponent box = 'bag'/>
@@ -5032,16 +5031,16 @@ var AdvanComponent = React.createClass({
         var time = this.context.time;
         var progress = this.props.progress;
         var seasonDescMap = {
-            'spring':<span className = 'season' style = {{color:COLOR.GREEN}}>春</span>,
-            'summer':<span className = 'season' style = {{color:COLOR.RED}}>夏</span>,
-            'autumn':<span className = 'season' style = {{color:COLOR.YELLOW}}>秋</span>,
-            'winter':<span className = 'season' style = {{color:COLOR.BLUE}}>冬</span>,
+            'spring':<span className = 'season' style = {{color:COLOR.GREEN}}>Spring</span>,
+            'summer':<span className = 'season' style = {{color:COLOR.RED}}>Summert</span>,
+            'autumn':<span className = 'season' style = {{color:COLOR.YELLOW}}>Fall</span>,
+            'winter':<span className = 'season' style = {{color:COLOR.BLUE}}>Winter</span>,
         }
         return <div className="panel panel-primary advanMain" >
                 <div className="panel-heading">
                     <div className = "time" id = "time">
-                        {this.context.generation?<span>-轮回{this.context.generation}-</span>:null}
-                        {seasonDescMap[this.context.season]}第<span className = "date">{time.day}</span>日 {getTimeDiplay(time.hour)}
+                        {this.context.generation?<span>-Reborn{this.context.generation}-</span>:null}
+                        {seasonDescMap[this.context.season]}day<span className = "date">{time.day}</span>.{getTimeDiplay(time.hour)}
                         <div style = {{backgroundColor:getColor(time.hour)}} className = "weatherBox"></div>
                     </div>
                     <span> : </span>
