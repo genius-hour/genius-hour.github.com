@@ -165,9 +165,9 @@ var ITEM_DATA = {
         isDrink:true,
     },
     water:{
-        name:'水',
+        name:'Water',
         type:'food',
-        desc:'此乃生命之源。',
+        desc:'You have to drink it',
         effect:{moist:10},
         canUse:true,
         isDrink:true,
