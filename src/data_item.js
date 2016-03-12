@@ -705,15 +705,15 @@ var ITEM_DATA = {
         value:12
     },
     bark:{
-        name:'树皮',
+        name:'Leaves',
         type:'met',
-        desc:'可以用来制作纸张。',
+        desc:'Used to making papers',
         value:4
     },
     paper:{
-        name:'纸',
+        name:'Paper',
         type:'met',
-        desc:'纸可以用来制作地图。',
+        desc:'Can used ti making map',
         value:12,
     },
     teeth:{
@@ -759,9 +759,9 @@ var ITEM_DATA = {
         value:22,
     },
     part:{
-        name:'零件',
+        name:'Components',
         type:'met',
-        desc:'是制作各种工具的材料。',
+        desc:'Important material',
     },
     cirrus:{
         name:'藤蔓',
