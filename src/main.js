@@ -448,7 +448,7 @@ var BtnHome = React.createClass({
         }
     },
     render:function(){
-        return <BtnComponent desc = '回家' handleClick = {this.gohome}/>
+        return <BtnComponent desc = 'Go Home' handleClick = {this.gohome}/>
     }
 });
 var ResourceDisplayComponent = React.createClass({
