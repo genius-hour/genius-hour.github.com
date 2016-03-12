@@ -57,11 +57,11 @@ var TYPE_DATA = {
         color:'#7E3558'
     },
     'food':{
-        name:"食材",
+        name:"Food",
         color:'#9694D8'
     },
     'weapon':{
-        name:"武器",
+        name:"Weapon",
         color:'#DD6820'
     },
     'cooked':{
