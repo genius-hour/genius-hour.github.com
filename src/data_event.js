@@ -76,7 +76,7 @@ var EVENT_DATA = {
         desc:'I have been to many places...',
         want:{paper:2},
         place:'Arcadia、Forest',
-        d_1:['年轻人，你一定对这里的地方不熟悉，','你得带纸过来，我才能标注给你啊...','冰冻荒原和黑森林？他们在...'],
+        d_1:['Young man, you probably just got here，','Bring me some paper, I will show you...','Arcadia and Dark Forest, they are at...'],
         d_2:'不用谢，我们银溪镇人一向好客...',
     },
     map_2:{
