@@ -382,7 +382,7 @@ var PLACE_DATA = {
         timeNeed:2,
     },
     blackForest:{
-        name:'黑森林',
+        name:'Forest',
         resource:{
             oldTree:{
                 name:'枯树',
