@@ -300,35 +300,74 @@ var PLACE_DATA = {
         requireEvent:'miner',
     },
     mountain:{
-        name:'冰冻荒原',
+        name:'Arcadia',
         resource:{
-            ice:{
-                name:'冰露',
-                things:{ice:4},
-                circle:0.1,
+            tree:{
+                name:'Farm',
+                things:{wheat:3},
+                circle:0.2,
                 timeNeed:1,
-                action:'采集',
-                require:{ps:5},
-                initAmount:12
+                action:'Collect',
+                require:{ps:3},
+                initAmount:15
             },
-            rabbitHole:{
-                name:'地洞',
-                things:{carrot:3},
-                circle:0.1,
-                timeNeed:2,
-                action:'挖掘',
-                require:{ps:3,shovel:1},
-                initAmount:20
+            part:{
+                name:'Components',
+                things:{part:2},
+                circle:0.5,
+                timeNeed:1,
+                action:'Collect',
+                require:{ps:2},
+                initAmount:10,
             },
-            hayCrop:{
-                name:'干草丛',
-                things:{hay:6},
-                circle:0.1,
-                timeNeed:2,
-                action:'收获',
-                require:{ps:10},
-                initAmount:20
+
+            gold:{
+                name:'Gold',
+                things:{gold:10},
+                circle:1,
+                timeNeed:0.1,
+                action:'Steal',
+                require:{ps:3},
+                initAmount:100,
+                event:'denBox'
             },
+            gem:{
+                name:'Gem',
+                things:{gem:10},
+                circle:1,
+                timeNeed:0.1,
+                action:'Steal',
+                require:{ps:3},
+                initAmount:50,
+                event:'denBox'
+            },
+        },
+        things:{
+            wood:20,
+            seed:40,
+            part:20,
+        },
+        mst:{},
+        event:{
+            trade:true,
+            miner:true,
+            farmer_1:true,
+            farmer_2:true,
+            farmer_3:true,
+            farmer_end:true,
+            robberQuestGet:true,
+            robberQuest:true,
+            spiderQuestGet:true,
+            spiderQuest:true,
+            dragonQuestGet:true,
+            dragonQuest:true,
+            misteryQuest_1:true,
+            misteryQuest_2:true,
+            misteryQuest_3:true,
+            gulf:true,
+        },
+        requireEvent:'tramp',
+        timeNeed:0.5
         },
         mst:{
             rabbit:{
