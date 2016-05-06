@@ -305,11 +305,11 @@ var PLACE_DATA = {
             ice:{
                 name:'Components',
                 things:{part:2},
-                circle:0.1,
+                circle:1.0,
                 timeNeed:1,
                 action:'Collect',
                 require:{ps:5},
-                initAmount:12
+                initAmount:25
             },
             rabbitHole:{
                 name:'地洞',
