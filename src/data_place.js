@@ -300,14 +300,14 @@ var PLACE_DATA = {
         requireEvent:'miner',
     },
     mountain:{
-        name:'冰冻荒原',
+        name:'Arcadia',
         resource:{
             ice:{
-                name:'冰露',
-                things:{ice:4},
+                name:'Components',
+                things:{part:2},
                 circle:0.1,
                 timeNeed:1,
-                action:'采集',
+                action:'Collect',
                 require:{ps:5},
                 initAmount:12
             },
