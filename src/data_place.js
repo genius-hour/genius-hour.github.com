@@ -1,5 +1,5 @@
 var PLACE_DATA = {
-    mountain:{
+    town:{
         name:'Arcadia',
         resource:{
             tree:{
@@ -299,8 +299,90 @@ var PLACE_DATA = {
         timeNeed:2,
         requireEvent:'miner',
     },
+    mountain:{
+        name:'冰冻荒原',
+        resource:{
+            ice:{
+                name:'冰露',
+                things:{ice:4},
+                circle:0.1,
+                timeNeed:1,
+                action:'采集',
+                require:{ps:5},
+                initAmount:12
+            },
+            rabbitHole:{
+                name:'地洞',
+                things:{carrot:3},
+                circle:0.1,
+                timeNeed:2,
+                action:'挖掘',
+                require:{ps:3,shovel:1},
+                initAmount:20
+            },
+            hayCrop:{
+                name:'干草丛',
+                things:{hay:6},
+                circle:0.1,
+                timeNeed:2,
+                action:'收获',
+                require:{ps:10},
+                initAmount:20
+            },
+        },
+        mst:{
+            rabbit:{
+                balancedAmount:12
+            },
+            eagle:{
+                balancedAmount:8
+            },
+            bull:{
+                balancedAmount:4
+            },
+        },
+        event:{
+            huntIntro:true,
+        },
+        things:{
+            hay:50,
+        },
+        timeNeed:3,
+        requireEvent:'map_1'
+    },
+    spiderPlace:{
+        name:'蜘蛛巢穴',
+        resource:{
+            brook:{
+                name:'蜘蛛卵群',
+                things:{spiderEgg:1},
+                circle:0.1,
+                timeNeed:1,
+                action:'偷窃',
+                require:{ps:1},
+                initAmount:20
+            },
+        },
+        things:{
+            spiderEgg:20,
+            teeth:20,
+            humanMeat:2,
+            bone:12,
+            meat:8,
+        },
+        mst:{
+            spider:{
+                balancedAmount:2
+            },
+            bigSpider:{
+                balancedAmount:1
+            },
+        },
+        requireEvent:'spiderQuestGet',
+        timeNeed:2,
+    },
     blackForest:{
-        name:'Forest',
+        name:'黑森林',
         resource:{
             oldTree:{
                 name:'枯树',
