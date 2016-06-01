@@ -4290,7 +4290,7 @@ var BattleComponent = React.createClass({
             var show = [];
             show.push(playerSuccess?<span key = {'p_atk_'+this.step}>You deal <span style = {{color:COLOR.GREEN}}>{playerDmg}</span>Damage！</span>:<span key = {'p_atk_'+this.step} style = {{color:COLOR.RED}}>你打歪了！</span>);
             if(this.context.mstState.hp > 0){
-                show.push(mstSuccess?<span key = {'m_atk_'+this.step}>你受到了<span style = {{color:COLOR.RED}}>{enermyDmg}</span>点伤害！</span>:<span key = {'m_atk_'+this.step} style = {{color:COLOR.GREEN}}>{MST_DATA[this.props.mst].name}{getMstDo()}</span>);
+                show.push(mstSuccess?<span key = {'m_atk_'+this.step}>You got damage of<span style = {{color:COLOR.RED}}>{enermyDmg}</span></span>:<span key = {'m_atk_'+this.step} style = {{color:COLOR.GREEN}}>{MST_DATA[this.props.mst].name}{getMstDo()}</span>);
                 show.push(getRec.bind(this)());
                 mstSuccess?this.context.playerStateChange({hp:-enermyDmg}):null;
             }else{
@@ -4327,7 +4327,7 @@ var BattleComponent = React.createClass({
                 this.context.callWindow(null);
             }else{
                 this.context.playerStateChange({hp:-enermyDmg});
-                var show = <p key = {'run_'+this.step}>逃跑失败！你收到了<span style = {{color:COLOR.RED}}>{enermyDmg}</span>点伤害！</p>;
+                var show = <p key = {'run_'+this.step}>Running  Faile!<span style = {{color:COLOR.RED}}>{enermyDmg}</span></p>;
                 this.context.showMsg(show);
             }
         }
