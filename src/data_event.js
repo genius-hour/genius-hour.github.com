@@ -80,12 +80,12 @@ var EVENT_DATA = {
         d_2:'Welcome to Arcaidia...',
     },
     map_2:{
-        name:'长者',
-        desc:'你见过那片湿地吗...',
+        name:'Old Man',
+        desc:'Have u been there?',
         want:{paper:4},
-        place:'遥远的湿地',
-        d_1:['遥远的湿地？在...'],
-        d_2:'湿地住着酒仙，你可以带点酒和他唠唠嗑。',
+        place:'???',
+        d_1:['???'],
+        d_2:'U can talk to the drunk man',
         event:'map_1',
     },
     map_3:{
