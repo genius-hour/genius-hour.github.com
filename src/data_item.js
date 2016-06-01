@@ -943,7 +943,7 @@ var ITEM_DATA = {
     },
 
     noWeapon:{
-        name:'拳头',
+        name:'Fist',
         weaponType:'melee',
         type:'weapon',
         damage:4,
