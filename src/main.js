@@ -1832,7 +1832,7 @@ var QuestComponent = React.createClass({
                         {this.props.children && this.props.children[1] || data.d_2}
                         {itemList?<RegisterComponent canBack = {false} canBeEmpty = {true} itemList = {itemList} willUnmount = {callBack.bind(this)||null}/>:null}
                         {learn?<div><p>--------</p><p>You have learned[<span style = {{color:COLOR.YELLOW}}>{learn}</span>]的制作。</p></div>:null}
-                        {place?<div><p>--------</p><p>You can goto [<span style = {{color:COLOR.YELLOW}}>{place}</span>]的位置。</p></div>:null}
+                        {place?<div><p>--------</p><p>You can goto [<span style = {{color:COLOR.YELLOW}}>{place}</span>]</p></div>:null}
                         <BtnBack  callBack = {callBack.bind(this)||null}/>
                      </div>
                  )
