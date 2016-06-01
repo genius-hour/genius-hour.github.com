@@ -1874,7 +1874,7 @@ var GiveComponent = React.createClass({
         var haveItem = (this.context.checkHaveResourceAll(itemList));
         return (
                 <BtnComponent disabled = {!haveItem}  handleClick = {this.onDone}>
-                    <span>{this.props.giveDesc || '给' }&nbsp;</span>
+                    <span>{this.props.giveDesc || 'Give' }&nbsp;</span>
                     <RequireComponent requireList = {itemList}/>
                 </BtnComponent>
             )
