@@ -4288,7 +4288,7 @@ var BattleComponent = React.createClass({
             this.context.playerStateUse(o(weapon,1));
             playerSuccess?this.context.mstStateChange({hp:-playerDmg}):null;
             var show = [];
-            show.push(playerSuccess?<span key = {'p_atk_'+this.step}>You deal <span style = {{color:COLOR.GREEN}}>{playerDmg}</span>Damage！</span>:<span key = {'p_atk_'+this.step} style = {{color:COLOR.RED}}>你打歪了！</span>);
+            show.push(playerSuccess?<span key = {'p_atk_'+this.step}>You deal <span style = {{color:COLOR.GREEN}}>{playerDmg}</span>Damage！</span>:<span key = {'p_atk_'+this.step} style = {{color:COLOR.RED}}>Fail Hit!</span>);
             if(this.context.mstState.hp > 0){
                 show.push(mstSuccess?<span key = {'m_atk_'+this.step}>You got damage of<span style = {{color:COLOR.RED}}>{enermyDmg}</span></span>:<span key = {'m_atk_'+this.step} style = {{color:COLOR.GREEN}}>{MST_DATA[this.props.mst].name}{getMstDo()}</span>);
                 show.push(getRec.bind(this)());
