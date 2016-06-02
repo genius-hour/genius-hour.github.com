@@ -101,9 +101,9 @@ var ITEM_DATA = {
         canUse:true,
     },
     wing:{
-        name:'翅膀',
+        name:'Wings',
         type:'food',
-        desc:'禽类动物的肢体。',
+        desc:'',
         effect:{full:7,san:-2},
         canUse:true,
     },
