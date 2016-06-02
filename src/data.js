@@ -115,22 +115,22 @@ var BUILDING_DATA = {
 
     alchemyTable:{
         name:'Alchemy Table',
-        desc:'Can brewed potion',
-        require:{wood:10,part:5},
+        desc:'Can brewed potion (Unbuildable Yet)',
+        require:{wood:999999999999999999999999,part:5},
         timeNeed:4,
         building:'makeTable',
     },
     magicTable:{
         name:'Magic Table',
-        desc:'Making magic weapon and scroll',
-        require:{wood:10,gem:2},
+        desc:'Making magic weapon and scroll (Unbuildable Yet)',
+        require:{wood:999999999999999999999999999999999999999999999},
         timeNeed:4,
         building:'makeTable',
     },
     scienceTable:{
         name:'Technology Research',
-        desc:'Research Technology',
-        require:{wood:10,part:5},
+        desc:'Research Technology(Unbuildable Yet)',
+        require:{wood:1000000000000000000000000000000000,part:5},
         timeNeed:4,
     },
     alco:{
