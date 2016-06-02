@@ -5922,24 +5922,24 @@ var MainComponent = React.createClass({
         var reason = '';
         switch(type){
             case'frozen':
-            reason = '寒冷';
+            reason = 'Frozen';
             break;
             case'hunger':
-            reason = '饥荒';
+            reason = 'Hunger';
             break;
             case'thirsty':
-            reason = '脱水';
+            reason = 'Dehydrade';
             break;
             case'health':
-            reason = '失血过多';
+            reason = 'Health';
             break;
         }
         var desc = (
                 <div style = {{margin:100}}>
-                    <p>你死了！</p>
-                    <p>死因：{reason}</p>
-                    <BtnComponent handleClick = {this.download.bind(null)}>读档</BtnComponent>
-                    <BtnComponent handleClick = {this.init}>重新开始</BtnComponent>
+                    <p>Game Over</p>
+                    <p>Reason:{reason}</p>
+                    <BtnComponent handleClick = {this.download.bind(null)}></BtnComponent>
+                    <BtnComponent handleClick = {this.init}>Restart</BtnComponent>
                 </div>
             )
         this.setState({
