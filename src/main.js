@@ -697,7 +697,7 @@ var NormalMenuComponent = React.createClass({
         this.context.setStateFromChildren({settings:settings});
     },
     willUpload:function(){
-        if(confirm('确定保存吗？')){
+        if(confirm('Sure save?')){
             this.upload();
         }
     },
