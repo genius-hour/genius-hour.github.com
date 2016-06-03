@@ -764,9 +764,9 @@ var ITEM_DATA = {
         desc:'Important material',
     },
     cirrus:{
-        name:'藤蔓',
+        name:'Cirrus',
         type:'met',
-        desc:'是制造弓的良好材料。',
+        desc:'Can make bow',
         value:3,
     },
     bone:{
