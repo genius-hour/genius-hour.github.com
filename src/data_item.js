@@ -789,9 +789,9 @@ var ITEM_DATA = {
         canUse:false
     },
     arrow:{
-        name:'箭',
+        name:'Arrow',
         type:'bullet',
-        desc:'是弓的弹药。',
+        desc:'Ammo of Bow',
         canUse:false
     },
 //武器
@@ -961,10 +961,10 @@ var ITEM_DATA = {
         require:{ps:1},
     },
     knife:{
-        name:'匕首',
+        name:'Knife',
         type:'weapon',
         weaponType:'melee',
-        desc:'初级的近战武器,很容易损坏。',
+        desc:'Melee attack, easy to break',
         range:1,
         damage:18,
         durable:6,
@@ -1043,10 +1043,10 @@ var ITEM_DATA = {
         require:{ps:1},
     },
     shortSword:{
-        name:'短剑',
+        name:'Short Sword',
         type:'weapon',
         weaponType:'melee',
-        desc:'轻型的近战武器，能力均衡。',
+        desc:'Melee attack, pretty good quaility',
         range:2,
         damage:17,
         durable:60,
@@ -1294,10 +1294,10 @@ var ITEM_DATA = {
         bullet:'bullet',
     },
     bow:{
-        name:'弓',
+        name:'Bow',
         type:'weapon',
         weaponType:'shoot',
-        desc:'远程弓箭系武器，需要箭。',
+        desc:'Range Attack, need arrow',
         range:30,
         damage:18,
         durable:400,
