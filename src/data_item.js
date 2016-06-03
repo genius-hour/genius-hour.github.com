@@ -1940,14 +1940,14 @@ var ITEM_DATA = {
         desc:'酒桶空间增加(1)。'
     },
     bigBoxSize_1:{
-        name:'箱子扩容(I)',
+        name:'Increase Size(I)',
         type:'bigBoxSizeBonus',
-        desc:'箱子空间增加(4)。'
+        desc:'Increase(4)。'
     },
     bigBoxSize_2:{
-        name:'箱子扩容(II)',
+        name:'Increase Size(II)',
         type:'bigBoxSizeBonus',
-        desc:'箱子空间增加(4)。'
+        desc:'Increase(4)。'
     },
     bigBoxSize_3:{
         name:'箱子扩容(III)',
